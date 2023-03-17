@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: '.env.deploy' });
 
 const {
   DEPLOY_USER,
@@ -11,8 +11,8 @@ const {
 module.exports = {
   apps: [
     {
-      name: 'api-frontend',
-      script: '.src/index.js',
+      name: 'frontend',
+      script: './build/index.html',
     },
   ],
 
